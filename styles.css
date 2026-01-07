@@ -1,0 +1,300 @@
+:root {
+    --bgcolor: #f7eccc; /*background-color: #d9f796;*/
+    --txtcolor: #1e1e1e;   /*color: #132b13*/
+    --highlight: #e85f67;
+}
+
+body {
+    font-family: "Azeret Mono", serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.45em;
+    
+    /*font-family: "PT Mono", serif;
+    font-style: normal;
+    font-size: 14px;*/
+    
+    /*font-family: "Cutive Mono", "Courier New", Courier, monospace;
+    font-size: 16px;*/
+    
+    margin: 0;
+    padding: 0;
+    /*background-color: #d9f796;*/
+    background-color: var(--bgcolor);
+    /*color: #132b13*/
+    color: var(--txtcolor);
+}
+
+p {
+    padding-bottom: 0.5em;
+}
+
+header {
+    position: fixed; /* Fix the header at the left */
+    top: 0;
+    left: 0;
+    width: 350px; /* Fixed width for the header */
+    height: 100%; /* Full height of the viewport */
+    z-index: 1000; /* Ensure it stays above other content */
+    margin-left: 4em;
+}
+
+.logo-section {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /*margin-top: 25%;*/
+    width: 50%;
+    height:60vh;
+    align-content:center;
+}
+.logo-img {
+        padding-bottom: 10vh;
+    }
+
+.titlefont {
+    font-family: "Wix Madefor Text", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: bold;
+    letter-spacing: 0.15em;
+    font-size: 42px;
+    margin-bottom: 0.2em;
+    margin-top: 1.5em;
+    /*text-shadow: 4px 4px #99c8a0;*/
+    color: var(--highlight);
+}
+
+.subtitlefont {
+    font-family: "Wix Madefor Text", serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: bold;
+    letter-spacing: 0.1em;
+    font-size: 22px;
+    margin-top: none;
+}
+
+h1 {
+	font-size: 24px;
+	font-style: normal;
+	font-weight: normal;
+	margin-bottom: none;    
+}
+
+
+h2 {
+    font-family: "Wix Madefor Text", serif;
+    color: var(--highlight);
+    
+	font-size: 18px;
+	font-style: italic;
+	font-weight: normal;
+    letter-spacing: 0.02em;
+}
+
+h3 {
+    font-family: "Wix Madefor Text", serif;
+    color: var(--highlight);
+    
+	font-size: 18px;
+	font-style: normal;
+	font-weight: bold;
+	line-height: none;
+    margin-bottom: 0.5em;
+}
+
+h4 {
+    font-family: "Wix Madefor Text", serif;
+    color: var(--highlight);
+	font-size: 16px;
+	font-style: italic;
+	font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 1.5em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 40px;
+}
+
+nav ul li {
+    margin: 0.8em 0; /* Space between navigation links */
+    width: 100%;
+}
+
+nav ul li a {
+    color: #132b13;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: none;
+    color: var(--highlight);
+}
+
+main {
+}
+
+section {
+    margin-top: none;
+    margin-left: 33em; /*keep out of the way of the menu*/
+    background-color: var(--bgcolor);
+}
+
+.games-section {
+}
+
+.game-item {
+    display: flex; /* Use flexbox for layout */
+    padding-bottom: 120px;
+    min-width:fit-content;
+}
+
+iframe {
+    border: none;
+}
+
+.video-iframe {
+    aspect-ratio: 16 / 9;
+    min-width: 560px;
+}
+
+.game-video {
+	padding-right:60px;
+    max-width: 560px;
+    min-width: 560px;
+}
+
+.game-text {
+    max-width: 560px; /*same as width of video*/
+    padding-right: 60px;
+}
+
+footer {
+    position: fixed; /* Fix the header at the left */
+    bottom: 0;
+    right: 0;
+    height: 3em; /* Full height of the viewport */
+    z-index: 1000; /* Ensure it stays above other content */
+    text-align: right;
+    width: 100%;
+    margin-right: 20px;
+}
+
+.about-section {
+    display: flex; /* Use flexbox for layout */
+    padding-bottom: 120px;
+}
+
+.about-image {
+    margin-left: 60px; /*none*/
+    padding-right:100px; /*60px*/
+    min-width: 460px; /*560px*/
+    width: 85%;
+    max-width: 460px; /*560px*/
+    height: 100%;
+    
+    scale: 0.8; opacity: 0;
+    animation: fade-in linear forwards;
+    animation-timeline: view();
+    animation-range: entry;
+}
+
+@keyframes fade-in {
+        to {scale: 1; opacity: 1;}
+    }
+
+.about-text {
+    max-width: 560px; /*same as width of video*/
+    padding-right: 60px;
+}
+
+.about-intro {
+	padding-bottom: 10px; 
+}
+
+.contact-section {
+    min-height: 90vh;
+    width: 90%;
+    text-align: center;
+    line-height: 90vh;
+    margin-left: 5%;
+}
+
+.contact-text {
+}
+
+.filler {
+    padding-top: 4.3em;
+}
+
+.top-filler {
+    padding-top: 4.3em;
+}
+
+@media screen and (max-width: 1500px) {
+    .about-section {
+        display:grid;
+        width: 100%;
+    }
+    .about-image {
+        margin-left: 40px;
+        padding-right: 0;
+    }
+    .video-iframe {
+        aspect-ratio: 16 / 9;
+        max-width: 700px;
+        min-width: auto;
+    }
+    .game-item {
+        display:grid;
+        padding-bottom: 100px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    header {
+        display:flex;
+        width: 100%;
+        height: fit-content;
+        background-color: var(--bgcolor);
+    }
+    .titlefont {
+        margin-top: 0.75em;
+        margin-bottom: 0;
+    }
+    .subtitlefont {
+        margin-top: 01em;
+        margin-bottom: none;
+    }
+    nav ul {
+        display: flex;
+        min-width: 90vw;
+        margin-top: 0;
+        margin-bottom: 1em;
+    }
+    section {
+        margin-left: 4em;
+    }
+    .top-filler {
+        padding-top: 12.5em;
+    }
+    .game-video {
+        min-width: auto;
+    }
+    .about-image {
+        min-width: auto;
+        margin-left: 0;
+        padding-right: 0;
+    }
+    .about-image {
+        padding-right: none;
+        min-width: auto;
+    }
+}

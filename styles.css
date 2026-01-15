@@ -219,15 +219,64 @@ footer {
 }
 
 .contact-section {
-    min-height: 90vh;
+    /*min-height: 90vh;
     width: 90%;
     text-align: center;
     line-height: 90vh;
     margin-left: 5%;
+    text-align: left;*/
+    position: relative;
+    min-height: 90vh;
+}
+
+.nokia-3310 {
+    position: absolute;
+    /*padding-top: 21em;
+    top: 35vh;*/
+    top: 39%;
+    right: 50%;
+    opacity: 60%;
+    
+    transition: transform .07s ease-in-out;
+}
+
+.nokia-3310:hover {
+    /*transform: rotate(6deg);*/
+    
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+  animation: shake 0.5s;
+
+  /* When the animation is finished, start again */
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 
 .contact-text {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    padding-top: 8px;
+    
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: 0.1em;
 }
+
+
 
 .filler {
     padding-top: 4.3em;
@@ -281,6 +330,9 @@ footer {
     }
     section {
         margin-left: 4em;
+    }
+    .filler {
+        padding-top: 12.5em;
     }
     .top-filler {
         padding-top: 12.5em;

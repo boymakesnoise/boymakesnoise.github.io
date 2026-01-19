@@ -2,6 +2,7 @@
     --bgcolor: #f7eccc; /*background-color: #d9f796;*/
     --txtcolor: #1e1e1e;   /*color: #132b13*/
     --highlight: #e85f67;
+    --3310opacity: 60%;
 }
 
 body {
@@ -235,12 +236,22 @@ footer {
     top: 35vh;*/
     top: 39%;
     right: 50%;
-    opacity: 60%;
+    /*opacity: 0%; /* 60% */
     
     transition: transform .07s ease-in-out;
+    
+    scale: 70%; opacity: 0;
+    animation: fade-in-3310 linear forwards;
+    animation-timeline: view();
+    animation-range: entry;
 }
 
+@keyframes fade-in-3310 {
+        to {scale: 1; opacity: var(--3310opacity);} /*60%*/
+    }
+
 .nokia-3310:hover {
+    opacity: var(--3310opacity); scale: 1;
     animation: shake 0.5s; /* Start the shake animation and make the animation last for 0.5 seconds */
     animation-iteration-count: infinite; /* When the animation is finished, start again */
 }
